@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+                <RelativeLayout android:layout_width="match_parent"
+                        android:id="@+id/imagelayout"
+
+                        android:layout_height="300dp">
+                    <ImageView android:layout_width="match_parent"
+                            android:id="@+id/edit_profile_imagae"
+                            android:layout_height="match_parent"
+                            android:foregroundGravity="center"
+                            android:src="@drawable/dogpic"
+                            android:scaleType="centerCrop"
+                            />
+                    <LinearLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/upload"
+                            android:layout_centerInParent="true">
+                        <ImageView android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/update_image"
+                                android:background="@drawable/ic_camera"
+                                />
+                        <ImageView android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/ic_photo"
+                                android:id="@+id/update_gallary"
+                                />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                    <Button
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_edittext"
+                            android:padding="10dp"
+                            android:text="Basic"
+
+                            android:textSize="@dimen/normaltext"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:id="@+id/basicinfo"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/basicinfolayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/editpagepetname"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/ic_login_edittext"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+
+
+                            android:textSize="@dimen/defult"
+
+                            android:hint="Enter Pet Name"
+                            android:textColor="@color/signup"
+                            />
+
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            >
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext">
+
+                            <AutoCompleteTextView
+                                    android:id="@+id/bittextbreed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:hint="Select Type"
+                                    android:background="@android:color/transparent"
+                                    android:singleLine="true"
+                                    android:paddingLeft="20dp"
+                                    android:textSize="@dimen/defult"
+                                    android:paddingRight="20dp"
+                                    />
+
+                            <ImageView
+                                    android:id="@+id/bibreedspinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:visibility="gone"
+                                    android:layout_weight="3"
+                                    android:background="@drawable/ic_expand_more_black" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="30dp"
+                                android:visibility="invisible"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_weight="1"
+                                >
+                            <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="30dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext">
+
+                            <EditText
+                                    android:id="@+id/biage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:hint="DD/MM/YYYY"
+                                    android:textSize="@dimen/defult"
+                                    android:enabled="false"
+                                    android:inputType="date"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/signup"
+                                    android:textColorHint="@color/signup"
+                                      />
+
+                            <ImageView
+                                    android:id="@+id/biagedone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:paddingRight="10dp"
+                                    android:src="@drawable/ic_insert_invitation" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:visibility="invisible"
+                                android:layout_weight="1"
+                                >
+
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:hint="DD/MM/YYYY"
+                                    android:inputType="date"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/signup"
+                                    android:textColorHint="@color/signup"
+                                      />
+                            <ImageView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:paddingRight="10dp"
+                                    android:src="@drawable/ic_insert_invitation"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                >
+                            <Spinner
+                                    android:id="@+id/bigender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/defult"
+                                    android:paddingLeft="10dp" />
+
+                            <ImageView android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/bigenderspinner"
+                                    android:layout_weight="3"
+                                    android:visibility="gone"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                >
+                            <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="30dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/bicyclelayout"
+                            android:visibility="gone"
+                            >
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                >
+                            <Spinner
+                                    android:id="@+id/BIcycle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="10dp" />
+                            <ImageView android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="3"
+                                    android:id="@+id/BIcyclespinner"
+                                    android:layout_gravity="center"
+                                    android:visibility="gone"
+                                    android:background="@drawable/ic_expand_more_black"
+                                    android:layout_marginRight="5dp"
+                                    />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                            <Spinner
+                                    android:id="@+id/biperiod"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="10dp" />
+                            <ImageView android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/biperiodspinner"
+                                    android:visibility="gone"
+                                    android:layout_weight="3"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_expand_more_black"
+                                    android:layout_marginRight="5dp"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+                    <Button
+                            android:id="@+id/moreinfo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_pet_catogory"
+                            android:padding="10dp"
+                            android:text="Pet More Info"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                    <Button
+                            android:id="@+id/petparentinfo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="@dimen/normaltext"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_pet_catogory"
+                            android:padding="10dp"
+                            android:text="Breeding"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/petparentinfolayout"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                >
+                            <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:textSize="@dimen/defult"
+                                    android:layout_weight="1"
+                                    android:id="@+id/ppdfathername"
+                                    android:background="@android:color/transparent"
+                                    android:layout_gravity="center"
+                                    android:textColorHint="@color/signup"
+
+                                    android:inputType="text"
+                                    android:textColor="@color/signup"
+                                    android:hint="Father"
+
+                                    />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                >
+
+                            <AutoCompleteTextView
+                                    android:id="@+id/ppdfatherbreedtext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/defult"
+                                    android:hint="Select Breed Type"
+                                    android:background="@android:color/transparent"
+                                    android:singleLine="true"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"/>
+
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/ppdfatherbreedspinner"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="3"
+                                    android:visibility="gone"
+                                    android:background="@drawable/ic_expand_more_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="10dp"
+                                >
+                            <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/pptmothername"
+                                    android:background="@android:color/transparent"
+                                    android:layout_gravity="center"
+                                    android:textColorHint="@color/signup"
+                                    android:textSize="@dimen/defult"
+                                    android:inputType="text"
+                                    android:textColor="@color/signup"
+                                    android:hint="Mother"
+
+                                    />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                >
+                            <AutoCompleteTextView
+                                    android:id="@+id/ppdmotherbreedname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/defult"
+                                    android:hint="Select Breed Type"
+                                    android:background="@android:color/transparent"
+                                    android:singleLine="true"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp" />
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:visibility="gone"
+                                    android:id="@+id/ppdmotherbreedspinner"
+                                    android:layout_weight="3"
+                                    android:background="@drawable/ic_expand_more_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/ppdparentadd1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/defult"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Address 1"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/ppdparentadd2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Address 2"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:textSize="@dimen/defult"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/ppdattachcenter"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Attach Certificate"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:textSize="@dimen/defult"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+                                android:enabled="false"
+
+                                />
+
+                        <Button
+                                android:id="@+id/ppdfileattach"
+                                android:layout_width="match_parent"
+                                android:layout_height="19dp"
+                                android:layout_margin="10dp"
+                                android:layout_weight="3"
+                                android:background="@drawable/ic_black_edittext"
+                                android:text="Upload"
+                                android:textAllCaps="false"
+                                android:gravity="center"
+                                android:textColor="@color/signup"
+                                android:textStyle="bold">
+
+                        </Button>
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Certificate"
+                            android:gravity="right"
+                            android:textColor="@color/splootcolour"
+                            android:textStyle="italic"
+                            android:textSize="@dimen/defult"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/certificate_view"
+                            />
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                    <Button
+                            android:id="@+id/petownerinfo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_pet_catogory"
+                            android:padding="10dp"
+                            android:text="Parent Profile"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/normaltext"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/petownerinfolayout"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/ownername"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/defult"
+                                android:background="@android:color/transparent"
+                                android:hint="Name"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                >
+
+                            <EditText
+                                    android:id="@+id/ownernumber"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:hint="Mobile"
+                                    android:inputType="number"
+                                    android:textSize="@dimen/defult"
+                                    android:maxLength="10"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="20dp"
+                                    android:paddingBottom="5dp"
+                                    android:textColor="@color/signup"
+                                    android:textColorHint="@color/signup"
+
+
+                                    />
+
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:visibility="gone"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                >
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="30dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+
+                        <EditText
+                                android:id="@+id/owneradd1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Parent Address 1"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:textSize="@dimen/defult"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+
+                        <EditText
+                                android:id="@+id/owneradd2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Enter Parent Address 2"
+                                android:inputType="text"
+                                android:textSize="@dimen/defult"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+
+                                />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                    <Button
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_pet_catogory"
+                            android:padding="10dp"
+                            android:text="Veterinarian"
+
+                            android:textSize="@dimen/normaltext"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:id="@+id/vertinationinfo"
+                            android:textStyle="bold" />
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/vertinationinfolayout"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            >
+                        <EditText
+                                android:id="@+id/doctername"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Name"
+                                android:inputType="text"
+                                android:textSize="@dimen/defult"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+                        <EditText
+                                android:id="@+id/clinicname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Hospital/Clinic Name"
+                                android:inputType="text"
+                                android:paddingLeft="20dp"
+                                android:textSize="@dimen/defult"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+
+                                />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+                        <EditText
+                                android:id="@+id/clinicnumber"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Mobile"
+                                android:textSize="@dimen/defult"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:digits="1234567890"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+                                 />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ic_login_edittext"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+                        <EditText
+                                android:id="@+id/clinicmailid"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Mail"
+                                android:textSize="@dimen/defult"
+                                android:inputType="textWebEmailAddress"
+                                android:paddingRight="20dp"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/signup"
+                                android:textColorHint="@color/signup"
+                                  />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_login_edittext"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+                    <EditText
+                            android:id="@+id/clinicaddress"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="Address"
+                            android:textSize="@dimen/defult"
+                            android:inputType="text"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/signup"
+                            android:textColorHint="@color/signup"
+                             />
+                </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:weightSum="1"
+                                android:layout_marginRight="10dp">
+
+                            <AutoCompleteTextView
+                                    android:id="@+id/cliniccountry"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".2"
+                                    android:background="@null"
+                                    android:hint="Select country"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="10dp"
+                                    android:singleLine="true" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:weightSum="1"
+                                android:layout_marginRight="20dp"
+                                >
+
+                            <AutoCompleteTextView
+                                    android:id="@+id/clinicstate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".2"
+                                    android:background="@null"
+                                    android:hint="Select state"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="10dp"
+                                    android:singleLine="true" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:weightSum="1"
+                                android:layout_marginRight="10dp"
+                                >
+
+                            <AutoCompleteTextView
+                                    android:id="@+id/cliniccity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".2"
+                                    android:background="@null"
+                                    android:hint="Cities / District"
+                                    android:singleLine="true"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="10dp" />
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_login_edittext"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:weightSum="1"
+                                android:layout_marginRight="20dp"
+                                >
+                            <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:paddingRight="10dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/clinicpin"
+                                    android:background="@android:color/transparent"
+                                    android:layout_gravity="center"
+                                    android:textColorHint="@color/signup"
+
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:maxLength="6"
+                                    android:textColor="@color/signup"
+                                    android:hint="Pincode"
+                                    />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_edittext"
+                        android:padding="10dp"
+                        android:id="@+id/editpagesubmint"
+                        android:layout_marginTop="20dp"
+                        android:text="Update"
+
+                        android:textSize="@dimen/normaltext"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+            <!--    <LinearLayout
+                        android:id="@+id/submitlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content">
+
+                   <ImageButton
+                           android:layout_width="40dp"
+                           android:layout_gravity="left"
+                           android:id="@+id/editpagesubmint"
+                           android:layout_height="40dp"
+                           android:background="@drawable/ic_offline_pin"
+                           />
+                </LinearLayout>  -->
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

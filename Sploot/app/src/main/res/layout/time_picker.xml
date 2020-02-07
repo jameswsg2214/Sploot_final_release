@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:id="@+id/headertext"
+            android:hint="Select Time"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/splootcolour"
+            android:textColorHint="@color/splootcolour"
+            android:textSize="20dp"
+            />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            />
+
+    <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:picker_curved="true"
+            app:picker_cyclic="true"
+            app:picker_visibleItemCount="7"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="ok"
+                android:id="@+id/time_ok"
+                android:textColor="@color/splootcolour"
+
+                />
+    </LinearLayout>
+
+
+</LinearLayout>

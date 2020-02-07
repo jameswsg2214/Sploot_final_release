@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background"
+        tools:context=".activities.MainActivity">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sploot_logo2"/>
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:gravity="center"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_gravity="left"
+                      android:layout_weight="1"
+        >
+            <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_add_circle_splootadd"
+                    android:layout_gravity="center"
+                    android:id="@+id/pet"
+
+            />
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sploot"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/splootcolour"
+                android:layout_gravity="center"
+                android:gravity="center"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="right"
+                      android:layout_weight="1"
+
+        >
+            <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Logout"
+                    android:layout_gravity="right"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:textColor="@color/signup"
+            />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="DashBoard"
+              android:textColor="@color/splootcolour"
+              android:textSize="30dp"
+            android:visibility="gone"
+              android:layout_gravity="center"
+    />
+
+
+    <TextView android:layout_width="match_parent"
+              android:id="@+id/result"
+              android:layout_height="wrap_content"/>
+   <Button android:layout_width="match_parent"
+            android:id="@+id/dilogbox"
+           android:background="@drawable/ic_edittext"
+            android:visibility="gone"
+            android:hint="Go to home Page" android:layout_height="wrap_content"/>
+
+   <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/testfrag"
+           android:orientation="vertical"
+            />
+
+
+    <!--<Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Pet register"
+            android:id="@+id/pet"
+    />
+
+    -->
+
+</LinearLayout>

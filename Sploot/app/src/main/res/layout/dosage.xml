@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/headertextfordata"
+            android:hint="Duration"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/splootcolour"
+            android:textColorHint="@color/splootcolour"
+            android:textSize="25dp"
+            />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            >
+        <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="15dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:id="@+id/numberpicker"
+                />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:id="@+id/calendercancel"
+                android:text="cancel"
+                android:textColor="@color/splootcolour"
+
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calenderok"
+                android:background="@android:color/transparent"
+                android:text="ok"
+                android:textColor="@color/splootcolour"
+
+                />
+    </LinearLayout>
+
+</LinearLayout>

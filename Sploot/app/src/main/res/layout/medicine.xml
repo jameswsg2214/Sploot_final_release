@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/mediclist"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="16dp"
+                android:layout_marginLeft="30dp"
+                android:text="Vaccination"
+                />
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        >
+       <Button
+               android:layout_width="wrap_content"
+               android:layout_gravity="center"
+               android:text="Add"
+               android:textSize="@dimen/normaltext"
+               android:id="@+id/vaccinationadd"
+               android:textColor="@color/white"
+               android:background="@drawable/ic_edittext"
+               android:layout_marginRight="10dp"
+               android:layout_height="30dp"
+
+           />
+
+        </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:textSize="16dp"
+
+                android:layout_marginLeft="30dp"
+                android:text="Deworming"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                >
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add"
+                    android:textSize="@dimen/normaltext"
+                    android:id="@+id/dewormingadd"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_edittext"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="30dp"
+
+                    />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:textSize="16dp"
+
+                android:layout_marginLeft="30dp"
+                android:text="Others"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                >
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add"
+                    android:id="@+id/othersadd"
+                    android:textSize="@dimen/normaltext"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_edittext"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="30dp"
+
+                    />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:textSize="16dp"
+
+                android:layout_marginLeft="30dp"
+                android:text="Note"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                >
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add"
+                    android:id="@+id/noteadd"
+                    android:textSize="@dimen/normaltext"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_edittext"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="30dp"
+
+                    />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/viewformedic">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/medicfragement"
+                />
+
+    </LinearLayout>
+
+
+    </LinearLayout>

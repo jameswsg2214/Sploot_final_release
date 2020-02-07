@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/splootcolour"
+            android:id="@+id/photo_heading_view"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Photos"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_weight=".3"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+        <ImageView
+                android:id="@+id/photo_fragment_close"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight=".7"
+                android:src="@drawable/ic_highlight_off"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/photoview"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_margin="20dp"
+            android:background="@drawable/rectangle"
+            >
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/uploadimage"
+                android:scaleType="centerCrop"
+                />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:id="@+id/photofunlayout"
+                android:visibility="gone"
+                android:layout_margin="20dp"
+
+                >
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_delete"
+                android:layout_marginRight="10dp"
+                android:id="@+id/deleteslectimage"
+                android:background="@color/red"
+                />
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageshare"
+                android:src="@drawable/ic_share"
+                android:background="@color/blue"
+
+                /></LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/upload_layout"
+
+            >
+        <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/imagecapture"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_camera_black"
+                android:layout_marginRight="10dp"
+                />
+        <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/galleryphotoupload"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_crop_original_black"
+                />
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/upload_image"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_done_blackimage"
+                android:visibility="visible"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.25"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp"
+                android:visibility="invisible"
+                android:id="@+id/image1card"
+                >
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image1"
+                    android:scaleType="centerCrop"
+                    />
+
+            <TextView
+                    android:id="@+id/p1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.25"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="5dp"
+                android:visibility="invisible"
+                android:id="@+id/image2card"
+                app:cardElevation="10dp">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/image2"/>
+
+            <TextView
+                    android:id="@+id/p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                     />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.25"
+                android:layout_margin="3dp"
+                android:id="@+id/image3card"
+                app:cardCornerRadius="5dp"
+                android:visibility="invisible"
+                app:cardElevation="10dp">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/image3"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+            <TextView
+                    android:id="@+id/p3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:visibility="invisible"
+                android:layout_weight="0.25"
+                android:layout_margin="3dp"
+                android:id="@+id/image4card"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/image4"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+            <TextView
+                    android:id="@+id/p4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.25"
+                android:layout_margin="3dp"
+                android:id="@+id/image5card"
+                app:cardCornerRadius="5dp"
+                android:visibility="invisible"
+                app:cardElevation="10dp">
+            <TextView
+                    android:id="@+id/p5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/image5"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_height="90dp"
+              android:id="@+id/photo_viewer"
+
+
+              android:horizontalSpacing="10dp"
+              android:numColumns="5"
+              android:padding="10dp"
+              android:scrollbars="none"
+              android:verticalSpacing="10dp"
+
+              />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

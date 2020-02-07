@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/bottom_navigation_home"
+            android:icon="@drawable/ic_home"
+            android:title="" />
+
+    <item
+            android:id="@+id/bottom_navigation_task"
+            android:icon="@drawable/ic_task"
+            android:title="" />
+
+    <item
+            android:id="@+id/bottom_navigation_dayupdate"
+            android:icon="@drawable/ic_health_track"
+            android:title=""/>
+    <item
+            android:id="@+id/bottom_navigation_calender"
+            android:icon="@drawable/ic_calender"
+            android:title=""/>
+    <item
+            android:id="@+id/bottom_navigationmenu"
+            android:icon="@drawable/ic_three_dot"
+            android:title=""/>
+
+
+</menu>

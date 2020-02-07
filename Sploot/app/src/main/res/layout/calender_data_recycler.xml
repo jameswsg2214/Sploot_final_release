@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="10"
+        >
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="2"
+            android:src="@drawable/ic_iconmonstr_medical_15"
+            />
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/text_name"
+                android:hint="No data"
+                android:textSize="@dimen/normaltext"
+                android:layout_height="20dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/status"
+                android:layout_toRightOf="@+id/text_name"
+
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/text_name"
+                android:layout_height="20dp"
+                android:id="@+id/time_data"
+                android:textSize="@dimen/normaltext"
+                android:hint="No data"
+                />
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/time_data"
+                android:src="@drawable/ic_notifications_black_24dp"
+                android:layout_below="@+id/text_name"
+                />
+    </RelativeLayout>
+
+    <ImageView
+            android:id="@+id/goto_nxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/ic_chevron_right_black" />
+</LinearLayout>

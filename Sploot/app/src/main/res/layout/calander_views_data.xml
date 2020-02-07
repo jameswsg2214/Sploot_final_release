@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/vaccination_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            >
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Vaccination"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight=".9"
+            />
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_weight=".1"
+                android:id="@+id/drop"
+                />
+    </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/yellow"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/vaccination_view"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/vaccination_recycler"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                />
+        <TextView
+                android:id="@+id/vaccination_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No data"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/deworming_layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:text="De-worming"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight=".9"
+                />
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_weight=".1"
+                android:id="@+id/drop_deworming"
+                />
+    </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/skyblue"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/demorming_view"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/deworming_recycler"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                />
+        <TextView
+                android:id="@+id/deworming_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No data"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/other_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:text="Others"
+                android:textStyle="bold"
+                android:layout_weight=".9"
+                android:textColor="@color/black"
+                />
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_weight=".1"
+                android:id="@+id/drop_other"
+                />
+    </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/green"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/other_view"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/other_recycler"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+        <TextView
+                android:id="@+id/others_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No data"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/weight_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Weight"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_weight=".9"
+                android:textColor="@color/black"
+                />
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_weight=".1"
+                android:id="@+id/drop_weight"
+                />
+    </LinearLayout>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/signup"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/weight_view"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weight_data"
+                android:hint="00.00kg"
+                />
+
+        <TextView
+                android:id="@+id/weight_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No data"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/note_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1"
+            >
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight=".9"
+                android:text="Note"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_weight=".1"
+                android:id="@+id/drop_note"
+                />
+    </LinearLayout>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/signup"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/note_view"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/note_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No data"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/note"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                />
+    </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/photo_layout_view"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:weightSum="1"
+                >
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight=".9"
+                    android:text="Photo"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_black"
+                    android:layout_weight=".1"
+                    android:id="@+id/photo_note"
+                    />
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

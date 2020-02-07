@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+
+    <group
+            android:id="@+id/firstrow"
+            >
+    <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:textSize="10dp"
+            android:title="My Profile" />
+
+    </group>
+    <group
+
+            android:id="@+id/secoudrow"
+            >
+    <item
+            android:id="@+id/gallery"
+            android:icon="@drawable/sidemenugallery"
+
+            android:title="Gallery" />
+
+    </group>
+<!--    <item
+            android:id="@+id/professional"
+            android:title="Veterinarian" />
+
+            -->
+
+    <group
+            android:id="@+id/thirdrow"
+
+            >
+    <item
+            android:id="@+id/tellafriend"
+
+            android:icon="@drawable/tellasfriendshare"
+
+            android:title="Tell a friend" />
+
+    </group>
+
+
+    <group
+            android:id="@+id/forthrow"
+
+            >
+
+    <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/getintouch"
+
+            android:title="Get In Touch"
+
+
+            />
+
+
+    </group>
+<!--    <item
+            android:id="@+id/setting"
+            android:title="Settings" />-->
+
+    <group
+            android:id="@+id/fifthrow"
+
+            >
+    <item
+            android:id="@+id/logout_all"
+
+            android:icon="@drawable/applogout"
+            android:title="Logout" />
+
+
+    </group>
+
+    <group
+            android:id="@+id/sixthrow"
+
+            >
+        <item
+                android:id="@+id/pet_profile"
+
+                android:icon="@drawable/pet_profile"
+                android:title="Pet Profile" />
+
+
+    </group>
+</menu>

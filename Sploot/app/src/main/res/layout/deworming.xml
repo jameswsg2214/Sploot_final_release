@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            >
+
+        <EditText android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/Deworming_name"
+                android:singleLine="true"
+                android:textSize="@dimen/defult"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_login_edittext"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:hint="Enter Deworming Name"
+                android:textStyle="bold"
+                android:textColor="@color/signup"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_login_edittext">
+            <Spinner
+                    android:id="@+id/deworming_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+
+        </LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/dosage_deworming"
+                android:singleLine="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_login_edittext"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:hint=""
+                android:inputType="number"
+                android:digits="1234567890."
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="@color/signup"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/select_date_deworming"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Date"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    />
+            <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/date_data"
+                    android:textSize="@dimen/normaltext"
+                    android:text="Today"
+
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/signup"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/select_repeat"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Repeat Every"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/repeat_data"
+                    android:textSize="@dimen/normaltext"
+                    android:text="Set Duration Here"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/signup"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/add_deworming_reminder"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add reminder"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="16dp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/deworming_alarm_hint"
+                    android:text="Set reminder here"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/deworming_reminder_recycler"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/add_reminder"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                >
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_alarm_black"
+                    android:layout_weight="3"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Add Reminder Time"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    />
+
+        </LinearLayout>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="Reminder Time"
+                />
+        <TextView
+                android:id="@+id/reminder_time_deworming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="@dimen/normaltext"
+                android:hint="Set Time" />
+
+        <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                android:layout_width="wrap_content"
+                android:id="@+id/get_time_dewoming"
+                android:layout_height="150dp"
+                app:picker_curved="true"
+                app:picker_textSize="17dp"
+                app:picker_cyclic="true"
+                app:picker_textColor="@color/black"
+                app:picker_selectedTextColor="@color/splootcolour"
+                app:picker_visibleItemCount="7"
+                />
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="SAVE"
+                android:id="@+id/save_deworming"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_edittext"
+                android:textSize="@dimen/normaltext"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                />
+    </LinearLayout>
+</ScrollView>

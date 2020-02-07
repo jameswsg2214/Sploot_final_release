@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_gravity="center"
+        tools:context=".activities.AlarmActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_sploot_logo2"
+            />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Title"
+            android:id="@+id/alarm_reminder_title"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            />
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Name"
+            android:gravity="center"
+
+            android:id="@+id/alarm_reminder_name"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reminder Time"
+            android:gravity="center"
+
+            android:id="@+id/alarm_reminder_time"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/normaltext"
+            android:background="@drawable/ic_edittext"
+            android:text="Mark Completed"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/alarm_close"
+            />
+
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+
+                android:layout_marginLeft="30dp"
+                android:textSize="@dimen/normaltext"
+                android:background="@drawable/ic_edittext"
+                android:text="Dismiss"
+                android:textAllCaps="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/dismiss"
+                />
+
+    </LinearLayout>
+
+</LinearLayout>

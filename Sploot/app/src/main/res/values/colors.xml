@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ff5705</color>
+
+    <color name="colorPrimaryDark">#EE7350</color>
+
+    <color name="colorAccent">#ff5705</color>
+
+    <color name="splootcolour">#ff5705</color>
+
+    <color name="splootcolour2">#EE7350</color>
+
+    <color name="signup">#7E7876</color>
+
+    <color name="litblack">#AAA6A6</color>
+
+    <color name="otp">#154F88</color>
+
+    <color name="red">#E91E1E</color>
+
+    <color name="white">#ffff</color>
+
+    <color name="blue">#7F92D3</color>
+
+    <color name="black">#000000</color>
+
+    <color name="yellow">#FFEB3B</color>
+
+    <color name="skyblue">#87ceeb</color>
+
+    <color name="green">#4CAF50</color>
+
+    <color name="cms_back">#7E7876</color>
+
+</resources>

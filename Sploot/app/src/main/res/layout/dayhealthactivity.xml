@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:background="@color/splootcolour">
+
+        <ImageView
+                android:id="@+id/previous_month_day"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:layout_weight=".2"
+                android:src="@drawable/ic_left_arrow" />
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:id="@+id/calender_month_day"
+                android:text="Sep"
+                android:textSize="@dimen/normaltext"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_right_arrow"
+                android:layout_weight=".2"
+                android:visibility="invisible"
+                android:id="@+id/next_month_day"
+
+                />
+
+    </LinearLayout>
+    <noman.weekcalendar.WeekCalendar
+            android:layout_width="match_parent"
+            android:id="@+id/week_Calendar"
+            android:layout_height="65dp"
+            app:selectedBgColor="@color/white"
+            app:todaysDateBgColor="@color/white"
+            app:daysTextColor="@color/black"
+            android:background="@color/colorPrimary"
+            app:numOfPages="150"
+            app:daysTextSize="@dimen/normaltext"
+            app:weekTextSize="@dimen/normaltext"
+            app:dayNameLength="threeLetters"
+            />
+
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frag_for_view"
+            />
+
+
+</LinearLayout>

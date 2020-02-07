@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile Picture"
+            android:gravity="center"
+            android:textStyle="bold"
+
+
+            android:textSize="@dimen/normaltext"
+            android:textColor="@color/signup"
+            android:layout_marginTop="20dp"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9"
+            android:background="@drawable/ic_black_edittext"
+            android:layout_margin="20dp">
+
+    <ImageView
+            android:id="@+id/profileimagae"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:scaleType="centerCrop" />
+        <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload"
+                android:layout_centerInParent="true">
+
+            <ImageView
+                    android:id="@+id/upload_image"
+                    android:layout_width="36dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_camera_black" />
+            <ImageView android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_crop_original_black"
+                    android:id="@+id/upload_gallary"
+                    />
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>

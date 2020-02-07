@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/splootcolour"
+            android:orientation="horizontal"
+            android:id="@+id/add_task_viewer"
+            android:visibility="gone"
+            android:weightSum="1"
+            >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                android:layout_weight=".3"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                />
+
+        <ImageView
+                android:id="@+id/task_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight=".7"
+                android:src="@drawable/ic_highlight_off" />
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout1"
+            android:orientation="vertical">
+
+        <EditText android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/medicine_name"
+                android:singleLine="true"
+                android:textSize="17dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_login_edittext"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:hint="Enter Vaccination Name"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="Reminder Time"
+                />
+        <TextView
+                android:id="@+id/reminder_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="Set Time" />
+
+        <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                android:layout_width="wrap_content"
+                android:id="@+id/get_time"
+                android:layout_height="150dp"
+                app:picker_curved="true"
+                app:picker_textSize="17dp"
+                app:picker_displayMinutes="true"
+                app:picker_cyclic="true"
+                app:picker_textColor="@color/black"
+                app:picker_selectedTextColor="@color/splootcolour"
+                app:picker_visibleItemCount="7"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/repeat_time"
+                android:layout_marginTop="10dp"
+                >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_weight=".6"
+                android:text="Repeat"
+                />
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selected_Type"
+                    android:hint="Never"
+                    android:gravity="right"
+                    android:layout_weight=".3"
+                    android:layout_gravity="center"
+                    />
+
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".1"
+                    android:src="@drawable/ic_chevron_right_black" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/repeat_list_view_layout"
+                android:layout_marginTop="10dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/never_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:layout_gravity="center"
+                        android:text="Never"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/never_select"
+                        android:layout_weight=".1"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/hourly_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Hourly"
+                        android:layout_gravity="center"
+                        />
+
+                <ImageView
+                        android:id="@+id/hourly_select"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/Daily_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Daily"
+                        android:layout_gravity="center"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/Daily_select"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/Weekly_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Weekly"
+                        />
+
+                <ImageView
+                        android:id="@+id/weekly_select"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/fortnightly_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Fortnightly" />
+
+                <ImageView
+                        android:id="@+id/Fortnightly_select"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/Monthly_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Monthly"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/Monthly_select"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/every3m_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Every 3 Months"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/Every3m_select"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/every6m_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Every 6 Months"
+                        />
+
+                <ImageView
+                        android:id="@+id/every6m_select"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/yearly_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Yearly"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/yearly_select"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/custom_layout"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight=".6"
+                        android:text="Custom"
+                        />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/custom_data_view"
+                        android:hint=""
+                        android:gravity="right"
+                        android:layout_weight=".3"
+                        android:layout_gravity="center"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_chevron_right_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/custom_layout_view"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/signup"
+                        />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:id="@+id/frequency_check"
+                        >
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Frequency"
+                            />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/frequency_Type"
+                            android:hint="Never"
+                            android:gravity="right"
+                            android:layout_weight=".3"
+                            android:layout_gravity="center"
+                            />
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/signup"
+                        />
+
+               <NumberPicker
+                       android:layout_width="match_parent"
+                       android:layout_height="150dp"
+                       android:id="@+id/custom_type_select"
+                       android:backgroundTint="@color/blue"
+                       android:outlineSpotShadowColor="@color/blue"
+
+                       />
+
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+
+                android:visibility="gone"
+
+                android:id="@+id/end_repeat_layout"
+                android:layout_marginRight="20dp"
+                >
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".6"
+                    android:textStyle="bold"
+                    android:text="End Repeat"
+                    />
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/end_repeat_data"
+                    android:hint="Never"
+                    android:gravity="right"
+                    android:layout_weight=".3"
+                    android:layout_gravity="center"
+                    />
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_chevron_right_black"
+                    />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/end_repeat_list_view_layout"
+                android:layout_marginTop="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/no_end_check"
+                    >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:text="Repeat Forever" />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/no_end_select"
+                        android:layout_weight=".1"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/end_repeat_check"
+                    >
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="End repeat date"
+                        />
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:id="@+id/end_repeat_select"
+                        android:layout_weight=".1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_done_black"
+                        android:visibility="invisible"
+
+                        />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/signup"
+                    />
+
+            <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:layout_width="wrap_content"
+                    android:id="@+id/get_end_date"
+                    android:layout_height="150dp"
+                    android:visibility="gone"
+                    app:picker_curved="false"
+                    app:picker_textSize="17dp"
+                    app:picker_selectorHeight="20dp"
+                    app:picker_cyclic="true"
+                    app:picker_displayMonth="true"
+                    app:picker_displayYears="true"
+                    app:picker_textColor="@color/black"
+                    app:picker_selectedTextColor="@color/splootcolour"
+                    app:picker_visibleItemCount="7"
+                    />
+
+        </LinearLayout>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="SAVE"
+                android:id="@+id/save_data_update"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_edittext"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                />
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

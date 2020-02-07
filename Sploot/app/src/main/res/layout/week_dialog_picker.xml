@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/week_picker_header"
+            android:hint="Duration"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/splootcolour"
+            android:textColorHint="@color/splootcolour"
+            android:textSize="23dp"
+            />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+        <NumberPicker
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/dialog_week_picker"
+                android:layout_weight=".8"
+                />
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/week_select"
+                android:text="Week"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/week_checkbox_layout"
+            android:layout_height="wrap_content">
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_sunday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Sunday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_Monday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Monday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_tueasdy"
+                android:buttonTint="@color/splootcolour"
+                android:text="Tuesday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_wednesday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Wednesday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_thuesday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Thursday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_friday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Friday"
+                />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_saterday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Saturday"
+                />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:id="@+id/week_frequency_cancel"
+                android:text="cancel"
+                android:textColor="@color/splootcolour"
+
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/week_frequency_ok"
+                android:background="@android:color/transparent"
+                android:text="ok"
+                android:textColor="@color/splootcolour"
+
+                />
+    </LinearLayout>
+
+</LinearLayout>

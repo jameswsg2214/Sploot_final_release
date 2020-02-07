@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout1"
+        android:orientation="vertical">
+    <EditText android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/vaccinationame"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_login_edittext"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:hint="Enter Vaccination Name"
+            android:textStyle="bold"
+            android:textColor="@color/signup"
+            />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/spinlayout"
+                android:background="@drawable/ic_login_edittext">
+            <Spinner
+                    android:id="@+id/vaccinationtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+
+        </LinearLayout>
+
+        <EditText android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/dosage_vaccination"
+                android:singleLine="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_login_edittext"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:hint=""
+                android:maxLength="2"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="@color/signup"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/durationclicklayout"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/durationhint"
+                android:text="Set Duration Here"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/signup"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/durationlayout"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/startdaylayout"
+                    android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start date"
+                    android:textSize="16dp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/startdateselect"
+                    android:text="Today"
+                    />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/signup"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    >
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/radioButton1">
+
+                    <RadioButton
+                            android:id="@+id/radiogroup1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="No end date found"
+                            android:textSize="14sp" />
+
+                    <RadioButton
+                            android:id="@+id/radiogroup2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="Untill date"
+                            android:textSize="14sp" />
+
+                    <RadioButton
+                            android:id="@+id/radiogroup3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                            android:background="?android:selectableItemBackground"
+                            android:layoutDirection="rtl"
+                            android:layout_gravity="start"
+                            android:textAlignment="textStart"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:text="For X days"
+                            android:textSize="14sp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@id/durationlayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/signup"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Util"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/durationdataformat"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/durationdata"
+                    android:hint="No data"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/frequencyclicklayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Frequency"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/frequencyhint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Set Frequency Here" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/signup" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frequencylayout"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiogroup"
+                >
+
+            <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Daily,X times a day"
+                    android:textSize="14sp" />
+
+            <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Daily, every X hours"
+                    android:textSize="14sp" />
+
+            <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Every X days"
+                    android:textSize="14sp" />
+            <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Specific days of week"
+                    android:textSize="14sp" />
+            <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Cycle:X days active, Y days paused"
+                    android:textSize="14sp" />
+
+        </RadioGroup>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/multiprocessview"
+                android:visibility="gone"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/dosagelayout"
+
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dosage"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dosagetext"
+                        android:hint="Tap to select Dosage"
+                        />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/remindereverylayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Remind every"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/remindereverytext"
+                        android:hint="Tap to select Reminder"
+                        />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/firstintakelayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="First Intake"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/firstintaketext"
+                        android:hint="Tap to select First Intake"
+                        />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/lastintakelayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Intake"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lastintaketext"
+                        android:hint="Tap to select Last Intake"
+                        />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/xyview"
+                android:visibility="gone"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/dayactivelayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Day active"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dayactiveverytext"
+                        android:hint="Tap to select days active"
+                        />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/Daypausedlayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Day paused"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Daypausedtext"
+                        android:hint="Tap to select days paused"
+                        />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/cycledaylayout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Today is cycle day"
+                        android:textSize="@dimen/normaltext"
+                        android:textStyle="bold"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/todaycycletext"
+                        android:hint="Tap to select cycle day"
+                        />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/checkboxlayout"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sunday"
+                    android:buttonTint="@color/splootcolour"
+                    android:text="Sunday"
+                    />
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Monday"
+                android:buttonTint="@color/splootcolour"
+                android:text="Monday"
+                />
+            <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tueasdy"
+                    android:buttonTint="@color/splootcolour"
+                    android:text="Tuesday"
+                    />
+            <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wednesday"
+                    android:buttonTint="@color/splootcolour"
+                    android:text="Wednesday"
+                    />
+            <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/thuesday"
+                    android:buttonTint="@color/splootcolour"
+                    android:text="Thursday"
+                    />
+            <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/friday"
+                    android:buttonTint="@color/splootcolour"
+                    android:text="Friday"
+                    />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saterday"
+                    android:buttonTint="@color/splootcolour"
+                android:text="Saturday"
+                />
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/freqency_data_layout"
+                    >
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/signup"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Utill"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/freqncey_format"
+                        />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/freqncey_data"
+                        android:hint="No data"
+                        />
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/reminderclicklayout"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Parts of the day"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/reminderhint"
+                        android:text="Select Here"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/mrnglayout"
+                        android:layout_height="match_parent"
+                        >
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:checked="false"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/mrngradio"
+                            android:buttonTint="@color/splootcolour"
+                            />
+
+                 <!--   <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_fish_eye_black_24dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/mrngradio"
+                            />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/mrngradioclick"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_lens_black_24dp" /> -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Morning"
+                            android:textSize="10dp"
+                            android:layout_below="@+id/mrngradio"
+                            android:layout_centerInParent="true"
+                            />
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/aftnlayout"
+
+                        android:layout_height="match_parent">
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:checked="false"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/aftnradio"
+                            android:buttonTint="@color/splootcolour"
+                            />
+               <!--     <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_fish_eye_black_24dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/aftnradio"
+                            />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/aftnradioclick"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_lens_black_24dp" /> -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Afternoon"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:layout_below="@+id/aftnradio"
+                            android:layout_centerInParent="true"
+                            />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/evnglayout"
+                        android:layout_height="match_parent">
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:checked="false"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/evngradio"
+                            android:buttonTint="@color/splootcolour"
+                            />
+
+                   <!-- <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_fish_eye_black_24dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/evngradio"
+                            />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/evngradioclick"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_lens_black_24dp" /> -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Evening"
+                            android:textSize="10dp"
+
+                            android:layout_below="@+id/evngradio"
+                            android:layout_centerInParent="true"
+                            />
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/nightlayout"
+                        android:layout_height="match_parent">
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:checked="false"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/nightradio"
+                            android:buttonTint="@color/splootcolour"
+                            />
+                 <!--   <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_fish_eye_black_24dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/nightradio"
+                            />
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/nightradioclick"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_lens_black_24dp" />-->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Night"
+                            android:textSize="10dp"
+                            android:layout_below="@+id/nightradio"
+                            android:layout_centerInParent="true"
+                            />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/alaramclicklayout"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Set reminder"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/alaramhint"
+                    android:text="Set reminder here"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reminder_recycler"
+                />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/add_reminder"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                >
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_alarm_black"
+                    android:layout_weight="3"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Add Reminder Time"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    />
+
+
+        </LinearLayout>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="SAVE"
+                android:id="@+id/savedata"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_edittext"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                />
+</LinearLayout>
+</ScrollView>

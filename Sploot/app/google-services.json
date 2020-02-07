@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "655998353005",
+    "firebase_url": "https://sploot-580b4.firebaseio.com",
+    "project_id": "sploot-580b4",
+    "storage_bucket": "sploot-580b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655998353005:android:7d83b1c801fb19da99c964",
+        "android_client_info": {
+          "package_name": "com.work.sploot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655998353005-6nnlo4ho1jos273svrst2u69pctp6tvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsBSRDVy0SmCRwjc-AQK92T5Sk_TlPfYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655998353005-6nnlo4ho1jos273svrst2u69pctp6tvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

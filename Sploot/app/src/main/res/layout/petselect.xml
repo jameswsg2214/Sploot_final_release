@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Splooter"
+            android:gravity="center"
+            android:textStyle="bold"
+
+            android:textSize="@dimen/normaltext"
+            android:textColor="@color/signup"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+        />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/dogbubble"
+            android:background="@drawable/dogbub" >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Dog"
+                android:id="@+id/dogtext"
+                android:textSize="20dp"
+                />
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/catbubble"
+            android:background="@drawable/catbub" >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/cattext"
+                android:text="Cat"
+                android:textSize="20dp"
+                />
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
